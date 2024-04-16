@@ -23,8 +23,8 @@ export const config: Options.Testrunner = {
     // should work too though). These services define specific user and key (or access key)
     // values you need to put in here in order to connect to these services.
     //
-    user: 'orlandoavila_SaKnUC',
-    key: 'wpUp3j8EbKrHdvrweUxk',
+    user: process.env.BROWSERSTACK_USERNAME,
+    key: process.env.BROWSERSTACK_ACCESS_KEY,
     hostname: 'hub.browserstack.com',
     //
     // If you run your tests on Sauce Labs you can specify the region you want to run your tests
@@ -146,7 +146,7 @@ export const config: Options.Testrunner = {
             'browserstack',
             {
                 browserstackLocal: true,
-                app: 'bs://c2f21d0b9d3c3e42e24c744d816052bf8a878787'
+                app: 'bs://f5a07a4cd6c2e86c1f9797f5e121e6fab864e065'
             }
         ]
     ],
