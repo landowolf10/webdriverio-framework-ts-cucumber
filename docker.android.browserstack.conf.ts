@@ -110,7 +110,7 @@ export const config: Options.Testrunner = {
             'browserstack',
             {
                 browserstackLocal: true,
-                app: process.env.BROWSERSTACK_APP_PATH
+                app: 'bs://f5a07a4cd6c2e86c1f9797f5e121e6fab864e065'
             }
         ]
     ],
