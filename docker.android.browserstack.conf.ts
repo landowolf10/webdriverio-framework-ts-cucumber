@@ -1,8 +1,8 @@
 import type { Options } from '@wdio/types'
 
 export const config: Options.Testrunner = {
-    user: process.env.BROWSERSTACK_USERNAME,
-    key: process.env.BROWSERSTACK_ACCESS_KEY,
+    user: 'orlandoavila_ZQrj5q',
+    key: 'PfUCqqiMHSWyNkQGJeBS',
     hostname: 'hub.browserstack.com',
     autoCompileOpts: {
         autoCompile: true,
