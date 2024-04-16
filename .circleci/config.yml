@@ -4,8 +4,8 @@ jobs:
     docker:
       - image: node:18.16.0
     environment:
-      - BROWSERSTACK_USERNAME: ${browserstack_access_key}
-      - BROWSERSTACK_ACCESS_KEY: ${browserstack_username}
+      - BROWSERSTACK_USERNAME: ${browserstack_username}
+      - BROWSERSTACK_ACCESS_KEY: ${browserstack_access_key}
     steps:
       - checkout
       - run:
