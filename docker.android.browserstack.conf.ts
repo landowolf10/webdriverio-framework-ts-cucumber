@@ -12,7 +12,7 @@ export const config: Options.Testrunner = {
         }
     },
     specs: [
-        '/app/src/features/**/*.feature'
+        'src/features/**/*.feature'
     ],
     // Patterns to exclude.
     exclude: [
