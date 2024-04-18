@@ -1,15 +1,5 @@
-import type { Options } from '@wdio/types';
-import * as fs from 'fs';
-import * as yaml from 'js-yaml';
-
-//let doc = YAML.readFileSync(fs.readFileSync('./github/workflows/ci.yml', 'utf8'));
-const configFile = fs.readFileSync('./.circleci/config.yml', 'utf-8');
-let loadedYml = yaml.load(configFile);
-console.log('YAML file content: ', loadedYml.jobs.build.environment[1].BROWSERSTACK_ACCESS_KEY);
-
+import type { Options } from '@wdio/types'
 export const config: Options.Testrunner = {
-    
-
     //
     // ====================
     // Runner Configuration
@@ -33,8 +23,8 @@ export const config: Options.Testrunner = {
     // should work too though). These services define specific user and key (or access key)
     // values you need to put in here in order to connect to these services.
     //
-    user: loadedYml.jobs.build.environment[0].BROWSERSTACK_USERNAME,
-    key: loadedYml.jobs.build.environment[1].BROWSERSTACK_ACCESS_KEY,
+    user: process.env.BROWSERSTACK_USERNAME,
+    key: process.env.BROWSERSTACK_ACCESS_KEY,
     hostname: 'hub.browserstack.com',
     //
     // If you run your tests on Sauce Labs you can specify the region you want to run your tests
