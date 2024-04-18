@@ -1,5 +1,15 @@
-import type { Options } from '@wdio/types'
+import type { Options } from '@wdio/types';
+import * as fs from 'fs';
+import * as YAML from 'yaml';
+
+//let doc = YAML.readFileSync(fs.readFileSync('./github/workflows/ci.yml', 'utf8'));
+const configFile = fs.readFileSync('./github/workflows/ci.yml', 'utf-8');
+YAML.parse(configFile);
+//console.log(doc.admin.permissions);
+
 export const config: Options.Testrunner = {
+    
+
     //
     // ====================
     // Runner Configuration
