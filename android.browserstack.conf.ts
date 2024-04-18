@@ -5,7 +5,7 @@ import * as yaml from 'js-yaml';
 //let doc = YAML.readFileSync(fs.readFileSync('./github/workflows/ci.yml', 'utf8'));
 const configFile = fs.readFileSync('./.circleci/config.yml', 'utf-8');
 let loadedYml = yaml.load(configFile);
-console.log('YAML file content: ', loadedYml.jobs.build.environment[0].BROWSERSTACK_ACCESS_KEY);
+console.log('YAML file content: ', loadedYml.jobs.build.environment[1].BROWSERSTACK_ACCESS_KEY);
 
 export const config: Options.Testrunner = {
     
@@ -34,7 +34,7 @@ export const config: Options.Testrunner = {
     // values you need to put in here in order to connect to these services.
     //
     user: loadedYml.jobs.build.environment[0].BROWSERSTACK_USERNAME,
-    key: loadedYml.jobs.build.environment[0].BROWSERSTACK_ACCESS_KEY,
+    key: loadedYml.jobs.build.environment[1].BROWSERSTACK_ACCESS_KEY,
     hostname: 'hub.browserstack.com',
     //
     // If you run your tests on Sauce Labs you can specify the region you want to run your tests
