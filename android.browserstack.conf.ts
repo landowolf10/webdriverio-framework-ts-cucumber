@@ -3,7 +3,7 @@ import * as fs from 'fs';
 import * as YAML from 'yaml';
 
 //let doc = YAML.readFileSync(fs.readFileSync('./github/workflows/ci.yml', 'utf8'));
-const configFile = fs.readFileSync('./.github/workflows/ci.yml', 'utf-8');
+const configFile = fs.readFileSync('./.circleci/config.yml', 'utf-8');
 const ymlFileContent = YAML.parse(configFile);
 console.log('YAML file content: ', ymlFileContent);
 
