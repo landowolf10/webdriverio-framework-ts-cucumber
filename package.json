@@ -2,6 +2,7 @@
   "name": "webdriverio-framework-ts-cucumber",
   "type": "module",
   "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
     "@wdio/appium-service": "^8.35.1",
     "@wdio/browserstack-service": "^8.35.1",
     "@wdio/cli": "^8.35.1",
@@ -10,9 +11,9 @@
     "@wdio/spec-reporter": "^8.32.4",
     "appium-uiautomator2-driver": "^3.0.6",
     "chai": "^5.1.0",
+    "js-yaml": "^4.1.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.4",
-    "yaml": "^2.4.1"
+    "typescript": "^5.4.4"
   },
   "scripts": {
     "wdio": "wdio run ./android.local.conf.ts"

@@ -1,11 +1,11 @@
 import type { Options } from '@wdio/types';
 import * as fs from 'fs';
-import * as YAML from 'yaml';
+import * as yaml from 'js-yaml';
 
 //let doc = YAML.readFileSync(fs.readFileSync('./github/workflows/ci.yml', 'utf8'));
 const configFile = fs.readFileSync('./.circleci/config.yml', 'utf-8');
-const ymlFileContent = YAML.parse(configFile);
-console.log('YAML file content: ', ymlFileContent['environment']);
+const ymlFileContent = yaml.load(configFile);
+console.log('YAML file content: ', ymlFileContent);
 
 export const config: Options.Testrunner = {
     
