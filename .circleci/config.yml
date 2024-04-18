@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: node:18.16.0
-    environment:
+    env:
       - BROWSERSTACK_USERNAME: ${BROWSERSTACK_USERNAME}
       - BROWSERSTACK_ACCESS_KEY: ${BROWSERSTACK_ACCESS_KEY}
     steps:
