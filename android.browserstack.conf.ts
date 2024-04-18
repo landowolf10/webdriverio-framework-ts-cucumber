@@ -4,8 +4,8 @@ import * as yaml from 'js-yaml';
 
 //let doc = YAML.readFileSync(fs.readFileSync('./github/workflows/ci.yml', 'utf8'));
 const configFile = fs.readFileSync('./.circleci/config.yml', 'utf-8');
-const ymlFileContent = yaml.load(configFile);
-console.log('YAML file content: ', ymlFileContent);
+let loadedYml = yaml.load(configFile);
+console.log('YAML file content: ', loadedYml.version);
 
 export const config: Options.Testrunner = {
     
